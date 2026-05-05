@@ -1,5 +1,5 @@
 ﻿# ejercicio-1-programacion
-# 🐾 Animal App con Node.js
+# 🐾 Animal con Node.js
 
 Este proyecto es una aplicación web simple desarrollada con **Node.js y Express**, que permite ingresar el nombre de un animal en un formulario y mostrarlo en una segunda vista.
 
