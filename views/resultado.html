@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del Animal</title>
+
+    <!-- Misma fuente para que combine -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Mismo fondo degradado */
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .animal {
+            font-size: 28px;
+            font-weight: bold;
+            color: #185a9d;
+            margin-top: 10px;
+        }
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animación */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">🐾</div>
+
+        <h1>Animal ingresado</h1>
+
+        <div class="animal" id="animal"></div>
+
+        <a href="/">⬅ Volver</a>
+
+    </div>
+
+    <script>
+        // Capturamos el parámetro desde la URL
+        const params = new URLSearchParams(window.location.search);
+
+        const animal = params.get('animal');
+
+        // Si no hay dato, mostramos mensaje
+        document.getElementById('animal').innerText = animal || "No se recibió ningún animal";
+    </script>
+
+</body>
+</html>
