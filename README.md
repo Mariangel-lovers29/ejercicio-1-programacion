@@ -31,7 +31,7 @@ Este proyecto es una aplicación web simple desarrollada con **Node.js y Express
 
 ## ⚙️ Instalación
 
-##Clonar el repositorio:
+## Clonar el repositorio:
 
 ```bash
 git clone https://github.com/TU-USUARIO/ejercicio-1-programacion.git
